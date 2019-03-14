@@ -119,6 +119,8 @@ RUN apt-get -o Acquire::ForceIPv4=true update \
 
 ##################################### PIP ######################################
 
+RUN pip install --upgrade pip
+
 RUN pip install  \
     numpy==1.12.0 \
     easydict==1.6 \
