@@ -1,4 +1,6 @@
 ## _SqueezeSeg_: Convolutional Neural Nets with Recurrent CRF for Real-Time Road-Object Segmentation from 3D LiDAR Point Cloud
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/icra2018/squeezeseg.svg)](https://hub.docker.com/r/icra2018/squeezeseg)
+<a href="#how-to-run-with-docker"><img src="https://img.shields.io/badge/Docker-instructions-brightgreen.svg"></a>
 
 By Bichen Wu, Alvin Wan, Xiangyu Yue, Kurt Keutzer (UC Berkeley)
 
@@ -104,4 +106,16 @@ The instructions are tested on Ubuntu 16.04 with python 2.7 and tensorflow 1.0 w
     ![alt text](https://github.com/BichenWuUCB/SqueezeSeg/raw/master/readme/Screen%20Shot%202018-02-17%20at%206.13.44%20PM.png)
     ![alt text](https://github.com/BichenWuUCB/SqueezeSeg/raw/master/readme/Screen%20Shot%202018-02-17%20at%206.14.05%20PM.png)
 
+# How to Run with Docker
+## Linux
+#### Prerequisites
+* NVIDIA GPU with CUDA support
+* [nvidia-docker 2.0](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
 
+Tested on Ubuntu 16.04.6 with Docker 18.06.1-ce, GPU GeForce 940M, NVIDIA Driver version 410.48.
+
+1. Open a terminal and run the command:
+```
+nvidia-docker run --rm -p 8888:8888 icra2018/squeezeseg:latest
+```
+2. Run a web browser and open the link: [http://localhost:8888/lab/tree/README.ipynb](http://localhost:8888/lab/tree/README.ipynb)
